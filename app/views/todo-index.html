@@ -1,3 +1,17 @@
 <div class="todo-index">
-	{{ todos }}
+	<table>
+
+		<tr>
+			<th>Task</th>
+			<th>Complete?</th>
+			<th></th>
+		</tr>
+
+		<tr ng-repeat="todo in todos">
+			<td>{{todo.task}}</td>
+			<td>{{todo.complete}}</td>
+			<td><a ui-sref="edit({ id: todo.id })">Edit</a></td>
+		</tr>
+
+	</table>
 </div>

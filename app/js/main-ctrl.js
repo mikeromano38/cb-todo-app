@@ -1,5 +1,8 @@
-angular.module('myApp').controller('MainCtrl', [ '$scope', function( $scope ){
+angular.module('myApp').controller('MainCtrl', [ '$scope', 'Todo', function( $scope, Todo ){
 
-	$scope.todos = 'Nothing here yet';
+	$scope.todos = [];
 
+	$scope.listRecieved = Todo.getList().then(function( todos ){
+		$scope.todos = todos;
+	});
 }]);

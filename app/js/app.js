@@ -13,4 +13,10 @@ angular.module('myApp', ['ui.router', 'restangular'])
 				url: '/',
 				templateUrl: 'views/todo-index.html'
 			})
+
+			.state('edit', {
+				url: '/edit/:id',
+				templateUrl: 'views/todo-edit.html'
+			})
 	}]);
+
